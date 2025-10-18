@@ -23,6 +23,15 @@
       padding: 60px 20px;
     }
 
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 20px;
+    }
+
     header h1 {
       font-size: 2.5em;
       color: #38bdf8;
@@ -32,6 +41,22 @@
       margin-top: 10px;
       font-size: 1.2em;
       color: #cbd5e1;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .resume-btn:hover {
+      background-color: #0ea5e9;
     }
 
     nav {
@@ -68,6 +93,38 @@
       color: #e2e8f0;
     }
 
+    /* Skills Section */
+    .skills {
+      background-color: #1e293b;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill span {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #e2e8f0;
+    }
+
+    .progress {
+      background-color: #334155;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 12px;
+      background-color: #38bdf8;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Projects */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,6 +148,7 @@
       margin-bottom: 10px;
     }
 
+    /* Contact */
     .contact {
       text-align: center;
     }
@@ -114,12 +172,15 @@
 <body>
 
   <header>
+    <img src="your-photo.jpg" alt="Your Photo">
     <h1>Hi, I'm Your Name</h1>
     <p>Full Stack Web Developer</p>
+    <a href="resume.pdf" class="resume-btn" download>⬇ Download Resume</a>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -128,8 +189,34 @@
     <h2>About Me</h2>
     <p>
       I'm a passionate web developer skilled in HTML, CSS, JavaScript, and modern frameworks.
-      I love building clean and responsive websites.
+      I love building clean, responsive, and user-friendly websites.
     </p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>React</span>
+        <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>Node.js</span>
+        <div class="progress"><div class="progress-bar" style="width: 75%;"></div></div>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
